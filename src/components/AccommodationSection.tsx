@@ -55,7 +55,7 @@ const AccommodationSection = () => {
           </div>
           {/* Venue Header */}
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-widest text-amber-900/60 mb-4 font-serif relative top-2">
+            <p className="text-sm uppercase tracking-widest text-amber-900/60 mb-4 font-serif relative top-2">
               VENUE
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 mb-6">
