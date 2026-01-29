@@ -37,12 +37,16 @@ const EventItem = ({
         MOBILE: original flex layout
         DESKTOP: grid layout
       */}
-      <div
-        className="
-          flex flex-row items-stretch gap-4
-          md:grid md:grid-cols-[42%_40px_1fr] md:gap-0
-        "
-      >
+     <div
+  className="
+    mx-auto
+    max-w-5xl
+    flex flex-row items-stretch gap-4
+    md:grid md:grid-cols-[1fr_40px_1fr] md:gap-0
+      md:-translate-x-28
+  "
+>
+
 
         {/* LEFT SIDE */}
         <div
@@ -81,9 +85,11 @@ const EventItem = ({
         </div>
 
         {/* CENTER LINE */}
-        <div className="relative flex flex-col items-center">
-          <div className="w-px h-full bg-[#C5A059]" />
-        </div>
+        {/* CENTER LINE */}
+<div className="relative flex flex-col items-center flex-shrink-0">
+  <div className="h-full border-l border-[#C5A059]" />
+</div>
+
 
         {/* RIGHT SIDE */}
         <div className="flex-grow flex items-center gap-4 md:gap-8 justify-between">
@@ -185,8 +191,9 @@ const EventsTimeline = () => {
   ];
 
   return (
-    <section
-      className="w-full py-16"
+      <section
+  className="w-full py-16 -mt-20 md:-mt-20"
+
       style={{
         backgroundImage: `url(${background3})`,
         backgroundSize: 'cover',
