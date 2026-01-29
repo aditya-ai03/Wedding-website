@@ -48,13 +48,14 @@ const WeddingHeader = ({
 <div
   className={cn(
     `
-  w-32 md:w-56 lg:w-64 
-  mb-8 md:mb-10 
-  transform 
-  translate-y-4 md:-translate-y-28 
-  transition-transform duration-700 
-  mt-4 md:mt-10
-  `,
+    w-32 md:w-56 lg:w-64 
+    mb-8 md:mb-10 
+    transform 
+    translate-y-4 md:-translate-y-28 
+    transition-transform duration-700 
+    md:mt-10 
+    ${useTopLogo ? "-mt-3" : "mt-4"}
+    `,
     logoContainerClassName
   )}
 >
