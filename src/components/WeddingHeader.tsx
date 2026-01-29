@@ -29,7 +29,7 @@ const WeddingHeader = ({
     { label: 'Accommodation', path: '/accommodation' },
     { label: 'RSVP', path: '/rsvp' },
     { label: 'Dress Code', path: '/dress-code' },
-    { label: 'Experience India', path: '/experience-india' },
+    { label: 'Explore India', path: '/experience-india' },
     { label: 'FAQs', path: '/faqs' },
   ];
 
