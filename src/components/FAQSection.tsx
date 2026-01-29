@@ -26,7 +26,8 @@ const faqs: FAQItem[] = [
     answer: [
       "Yes. Most guests will need a tourist visa. For UK, US, and Canadian passport holders a 30 day e-visa costs USD $25. We recommend applying 3-4 weeks before travel.",
       "Please make sure you apply via the official Indian government website only, third party websites often charge significantly more for an e-visa.",
-      "Please also remember to complete the India e-Arrival Card (e-arrival.gov.in) within 3 days before departure, as this is required for entry.",
+      "Please also remember to complete the India e-Arrival Card (e-card) online within 3 days before departure, as this is required for entry",
+      "if you are not a UK, USA, or Canadian passport holder, we'll be in touch to help guide you through the process."
     ],
   },
   {
@@ -35,17 +36,17 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Would you advise getting a car?",
-    answer: ["It's optional. Udaipur is easily navigable with autos or taxi apps, and since all wedding events and your stay are at Royal Retreat, you won't need a car for the wedding weekend itself."],
+    answer: ["It's optional. Udaipur is easily navigable with taxis or ride apps, and since all wedding events and your stay are at Royal Retreat, you won't need a car for the wedding weekend itself.If you plan to explore the city or nearby attractions after the wedding,having a car can be convenient."],
   },
   {
     question: "Would you advise staying at Royal Retreat after the wedding?",
-    answer: ["Since all wedding events are at Royal Retreat, staying here for the weekend is most convenient."],
+    answer: ["Since all wedding events are at Royal Retreat, staying here for the weekend is most convenient.If you plan to explore Udaipur or nearby areas afterward, you could also consider other hotels or report in the city for a longer stay experience"],
   },
 ];
 
 const FAQSection = () => {
   return (
-    <section className="section-container -py-[80px] md:12 bg-transparent md:bg-secondary/30">
+    <section className="section-container -py-[80px] md:12 bg-transparent ">
       <div className="text-center mb-16">
         <h2 className="font-display text-5xl md:text-6xl text-primary tracking-wide">
           FAQs
