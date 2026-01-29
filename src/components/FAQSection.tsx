@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
 
 const FAQSection = () => {
   return (
-    <section className="section-container py-20 bg-transparent md:bg-secondary/30">
+    <section className="section-container -py-[80px] md:12 bg-transparent md:bg-secondary/30">
       <div className="text-center mb-16">
         <h2 className="font-display text-5xl md:text-6xl text-primary tracking-wide">
           FAQs
