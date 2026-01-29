@@ -30,7 +30,6 @@ const events: WeddingEvent[] = [
     description: [],
     outfitImage: outfit1,
     womenNote: "Colourful, and celebratory!",
-    
   },
   {
     date: "OCTOBER 27, 2026",
@@ -45,10 +44,11 @@ const events: WeddingEvent[] = [
     title: "The Wedding",
     description: [
       "Women: Indian attire only (lehenga or sari preferred)",
-      "Men: Sherwani, bandhgala, formal kurta on formal waistcoats"
+      "Men: Sherwani, bandhgala, formal kurta with formal waistcoats",
     ],
     outfitImage: outfit3,
-    note: "Please Do Not Wear white and red, as these colours are reserved for my wife.Even white shirts and trousers",
+    note:
+      "Please do not wear white and red, as these colours are reserved for my wife. Even white shirts and trousers.",
   },
   {
     date: "",
@@ -63,7 +63,8 @@ const events: WeddingEvent[] = [
     title: "The Grand Finale",
     description: [],
     outfitImage: outfit5,
-    womenNote: "Dress to impress — just don't try to look better than my wife.",
+    womenNote:
+      "Dress to impress — just don't try to look better than my wife.",
     menNote: "Black tie / tuxedo",
     note: "Please don't be that guy who turns up in a grey suit",
   },
@@ -74,88 +75,105 @@ const WardrobeSection = () => {
     <section className="section-container">
       {/* Header */}
       <div className="text-center mb-16">
-        <img 
-          src={wardrobeHeader} 
-          alt="Wardrobe Planner - Decode Your Dresscode" 
+        <img
+          src={wardrobeHeader}
+          alt="Wardrobe Planner - Decode Your Dresscode"
           className="mx-auto max-w-md w-full"
         />
       </div>
-      
 
-      {/* Events Timeline */}
-      <div className="space-y-16">
+      {/* Events */}
+      <div className="space-y-20">
         {events.map((event, index) => (
-          <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-            {/* Date divider if exists */}
+          <div
+            key={index}
+            className="animate-fade-in"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            {/* Date Divider */}
             {event.dateImage ? (
-              <div className="mb-8">
-                <img 
-                  src={event.dateImage} 
-                  alt={event.date} 
+              <div className="mb-10">
+                <img
+                  src={event.dateImage}
+                  alt={event.date}
                   className="mx-auto w-full max-w-lg"
                 />
               </div>
             ) : event.date ? (
-              <div className="wine-divider mb-8">
+              <div className="wine-divider mb-10">
                 <span className="text-primary font-serif text-sm tracking-[0.3em] uppercase">
                   {event.date}
                 </span>
               </div>
             ) : null}
 
-            {/* Event content */}
-            <div className={`flex flex-row gap-4 items-start md:grid md:grid-cols-2 md:gap-8 md:items-center ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
-              {/* Text content */}
-              <div className={`flex-1 min-w-0 space-y-4 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <h3 className="font-display text-3xl text-primary">{event.title}</h3>
-                
-                {event.subtitle && (
-                  <p className="font-serif text-lg text-muted-foreground italic">
-                    {event.subtitle}
-                    <br />
-                    {event.womenNote}
-                  </p>
-                )}
+            {/* CONTENT WRAPPER */}
+            <div className="mx-auto md:max-w-5xl">
+              <div
+                className={`
+                  flex flex-row gap-4 items-start
+                  md:grid md:grid-cols-[1fr_1fr] md:gap-12 md:items-center
+                  ${index % 2 === 1 ? "flex-row-reverse" : ""}
+                `}
+              >
+                {/* TEXT */}
+                <div
+                  className={`
+                    flex-1 min-w-0 space-y-4
+                    ${index % 2 === 1 ? "md:order-2" : ""}
+                  `}
+                >
+                  <h3 className="font-display text-3xl text-primary">
+                    {event.title}
+                  </h3>
 
-                {event.description.length > 0 && (
-                  <ul className="space-y-2">
-                    {event.description.map((item, i) => (
-                      <li key={i} className="font-serif text-foreground">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {event.subtitle && (
+                    <p className="font-serif text-lg text-muted-foreground italic">
+                      {event.subtitle}
+                      {event.womenNote && (
+                        <>
+                          <br />
+                          {event.womenNote}
+                        </>
+                      )}
+                    </p>
+                  )}
 
-                {(event.womenNote || event.menNote) && (
-                  <div className="space-y-2 pt-2">
-                    {/* {event.womenNote && (
-                      <p className="font-serif text-foreground">
-                        <span className="font-serif text-lg text-muted-foreground italic"></span>
-                      </p>
-                    )} */}
-                    {/* {event.menNote && (
-                      <p className="font-serif text-foreground">
-                        <span className="font-semibold text-primary">Men:</span> {event.menNote}
-                      </p>
-                    )} */}
-                  </div>
-                )}
+                  {event.description.length > 0 && (
+                    <ul className="space-y-2">
+                      {event.description.map((item, i) => (
+                        <li
+                          key={i}
+                          className="font-serif text-foreground"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
-                {event.note && (
-                  <p className="font-serif text-sm text-muted-foreground italic pt-2 border-t border-border">
-                    {event.note}
-                  </p>
-                )}
-              </div>
+                  {event.note && (
+                    <p className="font-serif text-sm text-muted-foreground italic pt-3 border-t border-border">
+                      {event.note}
+                    </p>
+                  )}
+                </div>
 
-              {/* Outfit image */}
-              <div className={`flex ${index % 2 === 1 ? 'justify-start' : 'justify-end'} md:justify-center flex-shrink-0 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <img 
-                  src={event.outfitImage} 
-                  alt={`Outfit for ${event.title}`}
-                  className="w-28 sm:w-36 md:w-auto md:max-h-96 object-contain"
-                />
+                {/* IMAGE */}
+                <div
+                  className={`
+                    flex flex-shrink-0
+                    ${index % 2 === 1 ? "justify-start" : "justify-end"}
+                    md:justify-center
+                    ${index % 2 === 1 ? "md:order-1" : ""}
+                  `}
+                >
+                  <img
+                    src={event.outfitImage}
+                    alt={`Outfit for ${event.title}`}
+                    className="w-28 sm:w-36 md:w-auto md:max-h-96 object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -166,4 +184,3 @@ const WardrobeSection = () => {
 };
 
 export default WardrobeSection;
-
