@@ -66,7 +66,7 @@ const WeddingHeader = ({
 </div>
 
   {/* Date & Location (Home only) */}
-  {isHomePage && (
+ {isHomePage && (
   <p className="font-lora text-[10px] md:text-sm text-burgundy-light tracking-[0.3em] md:tracking-[0.4em] uppercase font-medium whitespace-nowrap text-center">
     October 26-28, 2026 · Udaipur, India
   </p>
@@ -89,7 +89,7 @@ const WeddingHeader = ({
               className={cn(
                 "nav-link uppercase transition-all duration-300",
                 // mobile: compact, one-line, no scroll
-                "block w-full text-center text-[9px] tracking-[0.08em] px-1 py-2 rounded-full md:w-auto md:text-[inherit] md:tracking-[0.2em] md:px-0 md:py-0 md:rounded-none",
+                "block w-full text-center text-[9px] tracking-[0.08em] px-1 py-2 rounded-full md:w-auto md:text-base md:tracking-[0.2em] md:px-0 md:py-0 md:rounded-none",
                 activeNav === item.label
                   ? "font-semibold text-burgundy bg-burgundy/10 border border-burgundy/30 md:bg-transparent md:border-0 md:border-b-2 md:border-burgundy md:pb-2"
                   : "text-gray-500 hover:text-burgundy border border-transparent hover:border-burgundy/20 md:border-0 md:pb-2"
@@ -113,7 +113,7 @@ const WeddingHeader = ({
               href={item.path}
               className={cn(
                 "nav-link uppercase transition-all duration-300",
-                "block w-full text-center text-[9px] tracking-[0.08em] px-1 py-2 rounded-full md:w-auto md:text-[inherit] md:tracking-[0.2em] md:px-0 md:py-0 md:rounded-none",
+                "block w-full text-center text-[9px] tracking-[0.08em] px-1 py-2 rounded-full md:w-auto md:text-base md:tracking-[0.2em] md:px-0 md:py-0 md:rounded-none",
                 activeNav === item.label
                   ? "font-semibold text-burgundy bg-burgundy/10 border border-burgundy/30 md:bg-transparent md:border-0 md:border-b-2 md:border-burgundy md:pb-2"
                   : "text-gray-500 hover:text-burgundy border border-transparent hover:border-burgundy/20 md:border-0 md:pb-2"
