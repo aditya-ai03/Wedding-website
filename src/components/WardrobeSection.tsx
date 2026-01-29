@@ -92,7 +92,7 @@ const WardrobeSection = () => {
           >
             {/* Date Divider */}
             {event.dateImage ? (
-              <div className="mb-10">
+              <div className="mb-10 w-[330px] md:w-full">
                 <img
                   src={event.dateImage}
                   alt={event.date}
