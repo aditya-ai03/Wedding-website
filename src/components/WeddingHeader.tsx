@@ -67,10 +67,10 @@ const WeddingHeader = ({
 
   {/* Date & Location (Home only) */}
   {isHomePage && (
-    <p className="font-lora text-xs md:text-sm text-burgundy-light tracking-[0.4em] uppercase font-medium">
-      October 26-28, 2026 · Udaipur, India
-    </p>
-  )}
+  <p className="font-lora text-[10px] md:text-sm text-burgundy-light tracking-[0.3em] md:tracking-[0.4em] uppercase font-medium whitespace-nowrap text-center">
+    October 26-28, 2026 · Udaipur, India
+  </p>
+)}
 
   {/* Navigation — Reduced mobile mt-20 to mt-6, kept md:mt-20 */}
   {showNav && (
