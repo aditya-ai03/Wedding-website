@@ -15,21 +15,21 @@ const TravelSection = () => {
         <img
           src={travelHeader}
           alt="Travel & Arrival"
-          className="w-[120px] sm:w-32 md:w-[300px] h-auto"
+          className="w-[120px] sm:w-32 md:w-[300px] h-auto md:absolute md:left-8"
         />
 
         {/* Illustration 1 */}
         <img
           src={passportCloud}
           alt="Passport illustration"
-          className="w-24 sm:w-32 md:w-[300px] h-auto"
+          className="w-24 sm:w-32 md:w-[400px] h-auto"
         />
 
         {/* Illustration 2 */}
         <img
           src={luggageIllustration}
           alt="Travel luggage illustration"
-          className="w-[120px] sm:w-32 md:w-[300px] h-auto "
+          className="w-[120px] sm:w-32 md:w-[300px] h-auto md:absolute md:right-8"
         />
       </div>
 
