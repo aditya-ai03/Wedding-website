@@ -13,7 +13,7 @@ const TravelArrival = () => {
     return (
       <MobilePageWrapper>
         <motion.div
-          className="w-[95%] max-w-md overflow-hidden rounded-t-[150px]"
+          className="w-[100%] max-w-md overflow-hidden rounded-t-[150px]"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
