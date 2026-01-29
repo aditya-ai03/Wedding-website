@@ -21,56 +21,15 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
   };
 
   // Floating hearts positions
-  const hearts = [
-    { left: '5%', top: '20%', delay: 0, size: 'w-6 h-6' },
-    { left: '8%', top: '40%', delay: 0.5, size: 'w-8 h-8' },
-    { left: '3%', top: '60%', delay: 1, size: 'w-5 h-5' },
-    { left: '10%', top: '75%', delay: 1.5, size: 'w-7 h-7' },
-    { left: '6%', top: '55%', delay: 0.8, size: 'w-4 h-4' },
-    { left: '12%', top: '30%', delay: 1.2, size: 'w-6 h-6' },
-    { left: '2%', top: '85%', delay: 0.3, size: 'w-5 h-5' },
-  ];
+ 
 
   return (
-    <div 
-      className="fixed inset-0 flex items-center justify-center cursor-pointer overflow-hidden"
-      style={{
-        backgroundImage: `url(${background1})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-      onClick={handleClick}
-    >
-      {/* Floating Hearts on the left */}
-      <AnimatePresence>
-        {!isOpening && hearts.map((heart, index) => (
-          <motion.div
-            key={index}
-            className={`absolute ${heart.size}`}
-            style={{ 
-              left: heart.left, 
-              top: heart.top,
-              color: 'hsl(350, 60%, 75%)',
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: [0.4, 0.8, 0.4],
-              y: [0, -15, 0],
-              rotate: [-5, 5, -5],
-            }}
-            transition={{
-              duration: 4,
-              delay: heart.delay,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </motion.div>
-        ))}
-      </AnimatePresence>
+  <div 
+  className="fixed inset-0 flex items-center justify-center cursor-pointer overflow-hidden bg-white"
+  onClick={handleClick}
+>
+
+      
 
       {/* Envelope Container */}
       <div className="relative w-[85vw] max-w-[450px] md:max-w-[500px]" style={{ perspective: '1500px' }}>
