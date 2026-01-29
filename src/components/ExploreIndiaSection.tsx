@@ -25,16 +25,13 @@ const destinations: Destination[] = [
   {
     image: destination2,
     title: "Pondicherry (Puducherry) - French + Calm",
-     octoberTitle: "Why October works:",
-    octoberPoints: [
-      "Coastal breeze, peaceful vibe",
-      "Less touristy than Goa",
-    ],
+    octoberTitle: "Why October works:",
+    octoberPoints: ["Coastal breeze, peaceful vibe", "Less touristy than Goa"],
   },
   {
     image: destination3,
     title: "Ranthambore National Park (Tiger Safari)",
-      octoberTitle: "Why October is ideal:",
+    octoberTitle: "Why October is ideal:",
     octoberPoints: [
       "Park reopens in October after monsoon",
       "Lush green forest & good wildlife sightings",
@@ -43,7 +40,7 @@ const destinations: Destination[] = [
   {
     image: destination4,
     title: "Jawai Leopard Safari (Luxury + Unique)",
- octoberTitle: "Why it's special:",
+    octoberTitle: "Why it's special:",
     octoberPoints: [
       "Post-monsoon landscapes are fresh and scenic",
       "Ideal conditions for safaris",
@@ -52,7 +49,7 @@ const destinations: Destination[] = [
   {
     image: destination5,
     title: "Jaipur + Agra (Royal + Iconic India)",
-     octoberTitle: "Why October works:",
+    octoberTitle: "Why October works:",
     octoberPoints: [
       "Comfortable temperatures for sightseeing",
       "Before peak winter crowds arrive",
@@ -92,28 +89,29 @@ const ExploreIndiaSection = () => {
               className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4 md:grid md:grid-cols-[auto_1fr] md:gap-6 md:max-w-3xl md:mx-auto">
+              <div className="md:grid md:grid-cols-[auto_1fr] md:gap-6 md:max-w-3xl md:mx-auto">
                 
-                {/* Image */}
-                <div className="flex-shrink-0">
+                {/* MOBILE: Image + Title Row */}
+                <div className="flex items-center gap-4 md:block">
                   <img
                     src={destination.image}
                     alt={destination.title}
-                    className="
-                      w-40 rounded-xl
-                      shadow-none
-                      md:w-full md:max-w-lg md:rounded-2xl
-                    "
+                    className="w-[150px] rounded-xl md:w-full md:max-w-lg md:rounded-2xl"
                   />
+
+                  <h3 className="font-display text-xl font-semibold text-primary md:hidden">
+                    {destination.title}
+                  </h3>
                 </div>
 
                 {/* Text */}
-                <div className="flex flex-col space-y-2 md:space-y-3 md:py-8 md:pl-10">
-                  <h3 className="font-display text-lg md:text-2xl text-primary font-semibold">
+                <div className="mt-4 md:mt-0 flex flex-col space-y-2 md:space-y-3 md:py-8 md:pl-10">
+                  {/* DESKTOP Title */}
+                  <h3 className="hidden md:block font-display text-2xl text-primary font-semibold">
                     {destination.title}
                   </h3>
 
-                  {/* Why October works */}
+                  {/* October Content */}
                   <div className="pt-1">
                     <p className="font-serif text-sm text-muted-foreground italic mb-1">
                       {destination.octoberTitle}
@@ -125,6 +123,7 @@ const ExploreIndiaSection = () => {
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
           ))}
