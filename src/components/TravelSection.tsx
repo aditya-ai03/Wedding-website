@@ -6,7 +6,7 @@ import cloudDecoration from "@/assets/trav5.png";
 
 const TravelSection = () => {
   return (
-    <section className="section-container relative ">
+    <section className="section-container ">
     
 
       {/* Header with passport illustration */}
@@ -15,21 +15,21 @@ const TravelSection = () => {
         <img
           src={travelHeader}
           alt="Travel & Arrival"
-          className="w-[170px] sm:w-36 md:w-[250px] h-auto"
+          className="w-[120px] sm:w-32 md:w-[300px] h-auto"
         />
 
         {/* Illustration 1 */}
         <img
           src={passportCloud}
           alt="Passport illustration"
-          className="w-24 sm:w-32 md:w-56 h-auto"
+          className="w-24 sm:w-32 md:w-[300px] h-auto"
         />
 
         {/* Illustration 2 */}
         <img
           src={luggageIllustration}
           alt="Travel luggage illustration"
-          className="w-[170px] sm:w-32 md:w-64 h-auto"
+          className="w-[120px] sm:w-32 md:w-[300px] h-auto "
         />
       </div>
 
