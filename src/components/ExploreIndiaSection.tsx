@@ -1,0 +1,137 @@
+import exploreBanner from "@/assets/exp1.png";
+import destination1 from "@/assets/exp2.png";
+import destination2 from "@/assets/exp3.png";
+import destination3 from "@/assets/exp4.png";
+import destination4 from "@/assets/exp5.png";
+import destination5 from "@/assets/exp6.png";
+
+interface Destination {
+  image: string;
+  title: string;
+  octoberTitle: string;
+  octoberPoints: string[];
+}
+
+const destinations: Destination[] = [
+  {
+    image: destination1,
+    title: "Goa (Relaxed + Fun)",
+    octoberTitle: "Why it's great in October:",
+    octoberPoints: [
+      "Monsoon ends — greenery & fewer crowds",
+      "Beach clubs reopen, weather is pleasant (not too hot)",
+    ],
+  },
+  {
+    image: destination2,
+    title: "Pondicherry (Puducherry) - French + Calm",
+     octoberTitle: "Why October works:",
+    octoberPoints: [
+      "Coastal breeze, peaceful vibe",
+      "Less touristy than Goa",
+    ],
+  },
+  {
+    image: destination3,
+    title: "Ranthambore National Park (Tiger Safari)",
+      octoberTitle: "Why October is ideal:",
+    octoberPoints: [
+      "Park reopens in October after monsoon",
+      "Lush green forest & good wildlife sightings",
+    ],
+  },
+  {
+    image: destination4,
+    title: "Jawai Leopard Safari (Luxury + Unique)",
+ octoberTitle: "Why it's special:",
+    octoberPoints: [
+      "Post-monsoon landscapes are fresh and scenic",
+      "Ideal conditions for safaris",
+    ],
+  },
+  {
+    image: destination5,
+    title: "Jaipur + Agra (Royal + Iconic India)",
+     octoberTitle: "Why October works:",
+    octoberPoints: [
+      "Comfortable temperatures for sightseeing",
+      "Before peak winter crowds arrive",
+    ],
+  },
+];
+
+const ExploreIndiaSection = () => {
+  return (
+    <section className="py-16 bg-transparent">
+      {/* Hero Banner */}
+      <div className="w-full mb-16">
+        <img
+          src={exploreBanner}
+          alt="Explore India"
+          className="w-full h-auto object-cover"
+        />
+      </div>
+
+      <div className="section-container pt-0">
+        {/* Intro */}
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <p className="font-serif text-lg text-muted-foreground leading-relaxed">
+            For those wishing to explore more of India, here are a few travel ideas
+            to enjoy before or after the wedding celebrations.
+          </p>
+          <p className="font-serif text-lg text-muted-foreground leading-relaxed">
+            Late October offers beautiful weather and an ideal time to travel.
+          </p>
+        </div>
+
+        {/* Destinations */}
+        <div className="space-y-10">
+          {destinations.map((destination, index) => (
+            <div
+              key={index}
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="flex items-start gap-4 md:grid md:grid-cols-[auto_1fr] md:gap-6">
+                
+                {/* Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={destination.image}
+                    alt={destination.title}
+                    className="
+                      w-24 rounded-xl
+                      shadow-none
+                      md:w-full md:max-w-lg md:rounded-2xl md:shadow-lg
+                    "
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex flex-col space-y-2 md:space-y-3 md:py-8">
+                  <h3 className="font-display text-lg md:text-2xl text-primary font-semibold">
+                    {destination.title}
+                  </h3>
+
+                  {/* Why October works */}
+                  <div className="pt-1">
+                    <p className="font-serif text-sm text-muted-foreground italic mb-1">
+                      {destination.octoberTitle}
+                    </p>
+                    <ul className="list-disc list-inside font-serif text-sm text-muted-foreground space-y-1">
+                      {destination.octoberPoints.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExploreIndiaSection;
