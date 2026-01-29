@@ -18,6 +18,7 @@ import envelopeFlap from '@/assets/envelope_flap.png';
 import ganeshIcon from '@/assets/ganesh_icon.png';
 import MobilePageWrapper from '@/components/MobilePageWrapper';
 import { useIsMobile } from '@/hooks/use-mobile';
+import belowSubmit from '@/assets/below-sub.png';
 
 const rsvpSchema = z.object({
   attendance: z.enum(['accept', 'decline'], {
@@ -119,13 +120,11 @@ const RSVPPage = () => {
           <WeddingHeader activeNav="RSVP" useTopLogo={true}/>
 
           {/* RSVP Title */}
-          <section className="text-center px-4 md:px-8 py-6">
-            <h1 className="font-cormorant text-4xl md:text-6xl text-primary tracking-[0.3em] mb-2">
+          <section className="text-center px-4 md:px-8 py-6 mt-1 mb-1">
+            <h1 className="font-cormorant text-4xl md:text-6xl text-primary tracking-[0.3em] mb-2 md:font-bold">
               R.S.V.P
             </h1>
-            <p className="font-lora text-sm text-burgundy-light">
-              Please respond before March 31, 2026.
-            </p>
+         
           </section>
 
           {/* Form Card */}
@@ -144,6 +143,9 @@ const RSVPPage = () => {
               {/* Pink Border Card */}
               <div className="bg-blush rounded-2xl p-4 md:p-6 border-4 border-blush">
                 {/* Inner Cream Card */}
+                 <p className="font-lora text-sm md:text-xl text-primary text-center">
+  Please respond before March 31<sup>st</sup>, 2026.
+</p>
                 <div className="bg-cream/90 rounded-xl p-6 md:p-8 border border-blush/50">
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -321,7 +323,7 @@ const RSVPPage = () => {
                   {/* Decorative Element */}
                   <div className="flex justify-center mt-6">
                     <img 
-                      src={ganeshIcon} 
+                      src={belowSubmit} 
                       alt="" 
                       className="w-12 h-12 object-contain opacity-40"
                     />
@@ -380,17 +382,16 @@ const RSVPPage = () => {
 
               {/* RSVP Title */}
               <section className="text-center px-4 md:px-8 py-6">
-                <h1 className="font-cormorant text-4xl md:text-6xl text-primary tracking-[0.3em] mb-2">
+                <h1 className="font-cormorant text-4xl md:text-[145px] text-primary tracking-[0.1em] mb-2 font-semibold">
                   R.S.V.P
                 </h1>
-                <p className="font-lora text-sm text-burgundy-light">
-                  Please respond before March 31, 2026.
-                </p>
+               
               </section>
 
               {/* Form Card */}
               <div className="px-4 md:px-8 pb-8 md:mt-20">
                 <div className="relative">
+                  
                   {/* Envelope Icon */}
                   <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -400,9 +401,14 @@ const RSVPPage = () => {
                       </svg>
                     </div>
                   </div>
+                  
 
                   {/* Pink Border Card */}
                   <div className="bg-blush rounded-2xl p-4 md:p-6 border-4 border-blush">
+                     <p className="font-lora text-xl text-primary text-center">
+  Please respond before March 31<sup>st</sup>, 2026.
+</p>
+
                     {/* Inner Cream Card */}
                     <div className="bg-cream/90 rounded-xl p-6 md:p-8 border border-blush/50">
                       <Form {...form}>
@@ -581,9 +587,9 @@ const RSVPPage = () => {
                       {/* Decorative Element */}
                       <div className="flex justify-center mt-6">
                         <img 
-                          src={ganeshIcon} 
+                          src={belowSubmit} 
                           alt="" 
-                          className="w-12 h-12 object-contain opacity-40"
+                          className="md:w-24 md:h-24 object-contain opacity-35"
                         />
                       </div>
                     </div>
