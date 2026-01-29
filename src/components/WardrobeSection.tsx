@@ -104,7 +104,7 @@ const WardrobeSection = () => {
             ) : null}
 
             {/* Event content */}
-            <div className="flex flex-row gap-4 items-start md:grid md:grid-cols-2 md:gap-8 md:items-center">
+            <div className={`flex flex-row gap-4 items-start md:grid md:grid-cols-2 md:gap-8 md:items-center ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
               {/* Text content */}
               <div className={`flex-1 min-w-0 space-y-4 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <h3 className="font-display text-3xl text-primary">{event.title}</h3>
@@ -150,11 +150,11 @@ const WardrobeSection = () => {
               </div>
 
               {/* Outfit image */}
-              <div className={`flex justify-end md:justify-center flex-shrink-0 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+              <div className={`flex ${index % 2 === 1 ? 'justify-start' : 'justify-end'} md:justify-center flex-shrink-0 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <img 
                   src={event.outfitImage} 
                   alt={`Outfit for ${event.title}`}
-                  className="w-28 sm:w-36 md:w-auto md:max-h-96 object-contain drop-shadow-lg"
+                  className="w-28 sm:w-36 md:w-auto md:max-h-96 object-contain"
                 />
               </div>
             </div>
