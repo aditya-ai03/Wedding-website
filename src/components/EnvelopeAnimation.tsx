@@ -51,7 +51,7 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
           <motion.div
             className="absolute w-20 h-20 md:w-28 md:h-28 z-30"
             style={{
-              top: '30%',
+              top: '35%',
               left: '40%',
               transform: 'translateX(-50%)',
             }}
