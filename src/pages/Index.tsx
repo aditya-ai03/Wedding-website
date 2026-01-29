@@ -50,7 +50,7 @@ const Index = () => {
                 {/* CARD CONTENT */}
                 <motion.div
                   className="
-                    w-[95%] max-w-md
+                    w-[100%] max-w-md
                     overflow-hidden
                     rounded-t-[150px]
                     md:w-full md:max-w-none
