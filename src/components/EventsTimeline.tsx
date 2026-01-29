@@ -31,7 +31,7 @@ const EventItem = ({ title, date, time, description, icon, isLast = false, index
         <div 
           className={`
             w-[40%] md:w-[42%] flex items-center gap-3 md:gap-10 
-            ${isOdd ? 'flex-row-reverse' : 'flex-row'} 
+            ${isOdd ? 'flex-row-reverse md:pl-20 lg:pl-60' : 'flex-row'} 
             justify-end
           `}
         >
