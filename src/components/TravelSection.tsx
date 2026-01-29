@@ -82,7 +82,7 @@ coordinate travel so everyone arrives comfortably and without stress.
           <img 
             src={floralDivider} 
             alt="" 
-            className="w-75 opacity-80"
+            className="w-75 md:w-[600px] opacity-80"
           />
         </div>
 
