@@ -6,6 +6,7 @@ import EventsTimeline from "@/components/EventsTimeline";
 import WeddingFooter from "@/components/WeddingFooter";
 import background2 from "@/assets/background_2.png";
 import ganeshIcon from "@/assets/ganesh_icon.png";
+import banner from "@/assets/banner_1.png"
 
 const Index = () => {
   const [showEnvelope, setShowEnvelope] = useState(() => {
@@ -36,7 +37,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="min-h-screen bg-white"
           >
-            <div className="flex flex-col items-center px-4 md:px-8">
+           <div className="flex flex-col items-center px-4 md:px-8 ">
               {/* BACKGROUND WRAPPER — IMPORTANT */}
               <div
                 className="
@@ -60,27 +61,14 @@ const Index = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <WeddingHeader />
+                 <div className="md:-mt-48">
+                   <WeddingHeader />
+                 </div>
 
                   {/* DATE */}
                   <section className="text-center px-4 md:px-8 py-6">
                     <div className="flex justify-center gap-4 md:gap-16">
-                      <div>
-                        <h2 className="font-cormorant text-3xl md:text-4xl italic">
-                          October 26 – 28,
-                        </h2>
-                        <h2 className="font-cormorant text-3xl md:text-4xl italic">
-                          2026
-                        </h2>
-                      </div>
-                      <div>
-                        <h2 className="font-cormorant text-3xl md:text-4xl italic">
-                          Udaipur, (RJ.)
-                        </h2>
-                        <h2 className="font-cormorant text-3xl md:text-4xl italic">
-                          India
-                        </h2>
-                      </div>
+                      <img src={banner} alt="" className="md:w-100 md:h-40" />
                     </div>
 
                     <div className="flex justify-center my-4">
