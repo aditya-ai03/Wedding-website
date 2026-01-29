@@ -72,9 +72,9 @@ const ExploreIndiaSection = () => {
         />
       </div>
 
-      <div className="section-container pt-0">
+      <div className="section-container pt-0 md:flex md:flex-col md:items-center">
         {/* Intro */}
-        <div className="text-center mb-12 max-w-2xl mx-auto">
+        <div className="text-center mb-16 md:mb-12 max-w-2xl mx-auto">
           <p className="font-serif text-lg text-muted-foreground leading-relaxed">
             For those wishing to explore more of India, here are a few travel ideas
             to enjoy before or after the wedding celebrations.
@@ -85,14 +85,14 @@ const ExploreIndiaSection = () => {
         </div>
 
         {/* Destinations */}
-        <div className="space-y-10">
+        <div className="space-y-16 md:space-y-10 md:w-full md:max-w-3xl">
           {destinations.map((destination, index) => (
             <div
               key={index}
               className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4 md:grid md:grid-cols-[auto_1fr] md:gap-6">
+              <div className="flex items-start gap-4 md:grid md:grid-cols-[auto_1fr] md:gap-6 md:max-w-3xl md:mx-auto">
                 
                 {/* Image */}
                 <div className="flex-shrink-0">
@@ -100,15 +100,15 @@ const ExploreIndiaSection = () => {
                     src={destination.image}
                     alt={destination.title}
                     className="
-                      w-24 rounded-xl
+                      w-40 rounded-xl
                       shadow-none
-                      md:w-full md:max-w-lg md:rounded-2xl md:shadow-lg
+                      md:w-full md:max-w-lg md:rounded-2xl
                     "
                   />
                 </div>
 
                 {/* Text */}
-                <div className="flex flex-col space-y-2 md:space-y-3 md:py-8">
+                <div className="flex flex-col space-y-2 md:space-y-3 md:py-8 md:pl-10">
                   <h3 className="font-display text-lg md:text-2xl text-primary font-semibold">
                     {destination.title}
                   </h3>
