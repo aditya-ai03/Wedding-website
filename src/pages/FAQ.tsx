@@ -34,17 +34,17 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="min-h-screen flex flex-col items-center py-4 px-4 md:px-8">
-        {/* Main Card Container */}
+        {/* Main Card Container — match Travel & Arrival and other pages */}
         <motion.div
-          className="w-[90%] max-w-md mx-auto rounded-t-[150px] overflow-hidden shadow-2xl md:w-full md:max-w-none md:rounded-none md:mt-0 md:pt-10 md:clip-none"
-          // initial={{ y: 100, opacity: 0 }}
-          // animate={{ y: 0, opacity: 1 }}
-          // transition={{ duration: 0.8, delay: 0.2 }}
-          // style={{
-          //   backgroundImage: `url(${background2})`,
-          //   backgroundSize: 'cover',
-          //   backgroundPosition: 'top center',
-          // }}
+          className="w-[90%] max-w-md mx-auto rounded-t-[150px] overflow-hidden md:w-full md:max-w-none md:rounded-none md:mt-0 md:pt-10 md:clip-none"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{
+            backgroundImage: `url(${background2})`,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+          }}
         >
           {/* Header Section */}
           <WeddingHeader activeNav="FAQs" useTopLogo={true} />
