@@ -74,52 +74,48 @@ const WeddingHeader = ({
       {/* Navigation */}
       {showNav && (
         <nav
-          className={cn(
-            // Removed whitespace-nowrap from the parent to allow children to wrap internally
-            "mt-6 md:mt-20 w-full flex flex-row items-center justify-between md:justify-center px-2 md:px-12 overflow-x-hidden md:overflow-x-visible",
-            navClassName
-          )}
-        >
-          {navItems.map((item, index) => (
-            <span key={item.label} className="flex items-center justify-center md:flex-none">
-              <Link
-  to={item.path}
   className={cn(
-    "nav-link uppercase transition-all duration-300",
-    // Added 'hover:no-underline' to prevent the underline effect
-    "flex items-center justify-center w-full text-center text-[8px] leading-[1.1] tracking-[0.05em] px-0.5 py-2 hover:no-underline md:block md:w-auto md:text-base md:tracking-[0.2em] md:px-0 md:py-0",
-    activeNav === item.label
-      ? "font-semibold text-burgundy md:border-b-2 md:border-burgundy md:pb-2"
-      : " hover:text-burgundy md:border-b-2 md:border-transparent md:pb-2" 
+    "mt-4 md:mt-6 w-full flex flex-row items-start justify-between md:justify-center px-2 md:px-12 overflow-x-hidden md:overflow-x-visible",
+    navClassName
   )}
 >
-                {/* Mobile Labels - Multi-line support */}
-                <span className="md:hidden">
-                  {item.label === "Travel & Arrival" ? (
-                    "Travel"
-                  ) : item.label === "Accommodation" ? (
-                    "Stay"
-                  ) : item.label === "Dress Code" ? (
-                    <>Dress<br />Code</>
-                  ) : item.label === "Experience India" ? (
-                    <>Explore<br />India</>
-                  ) : (
-                    item.label
-                  )}
-                </span>
+  {navItems.map((item, index) => (
+    <span key={item.label} className="flex items-start justify-center md:flex-none">
+      <Link
+        to={item.path}
+        className={cn(
+          "nav-link uppercase transition-all duration-300",
+          "flex items-center justify-center w-full text-center text-[8px] leading-[1.1] tracking-[0.05em] px-0.5 py-2 hover:no-underline md:block md:w-auto md:text-base md:tracking-[0.2em] md:px-0 md:py-0",
+          activeNav === item.label
+            ? "font-semibold text-burgundy md:border-b-2 md:border-burgundy md:pb-2"
+            : " hover:text-burgundy md:border-b-2 md:border-transparent md:pb-2"
+        )}
+      >
+        <span className="md:hidden">
+          {item.label === "Travel & Arrival" ? (
+            "Travel"
+          ) : item.label === "Accommodation" ? (
+            "Stay"
+          ) : item.label === "Dress Code" ? (
+            <>Dress<br />Code</>
+          ) : item.label === "Experience India" ? (
+            <>Explore<br />India</>
+          ) : (
+            item.label
+          )}
+        </span>
+        <span className="hidden md:inline whitespace-nowrap">{item.label}</span>
+      </Link>
 
-                {/* Desktop Labels - Single line */}
-                <span className="hidden md:inline whitespace-nowrap">{item.label}</span>
-              </Link>
+      {index < navItems.length - 1 && (
+        <span className="hidden md:inline text-gray-200 mx-2 md:mx-6 lg:mx-10 font-extralight">
+          |
+        </span>
+      )}
+    </span>
+  ))}
+</nav>
 
-              {index < navItems.length - 1 && (
-                <span className="hidden md:inline text-gray-200 mx-2 md:mx-6 lg:mx-10 font-extralight">
-                  |
-                </span>
-              )}
-            </span>
-          ))}
-        </nav>
       )}
     </header>
   );
