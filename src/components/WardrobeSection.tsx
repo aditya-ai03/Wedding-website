@@ -14,6 +14,7 @@ interface WeddingEvent {
   dateImage?: string;
   title: string;
   subtitle?: string;
+  additionalNote?: string;
   description: string[];
   outfitImage: string;
   womenNote?: string;
@@ -27,9 +28,9 @@ const events: WeddingEvent[] = [
     dateImage: dateOct26,
     title: "Rhythm & Riwaaz",
     subtitle: "Indian festive wear - wear any Indian outfit you like.",
+    additionalNote: "Colourful, and celebratory!",
     description: [],
     outfitImage: outfit1,
-    womenNote: "Colourful, and celebratory!",
   },
   {
     date: "OCTOBER 27, 2026",
@@ -43,10 +44,11 @@ const events: WeddingEvent[] = [
     date: "",
     title: "The Wedding",
     description: [
-      "Women: Indian attire only (lehenga or sari preferred)",
-      "Men: Sherwani, bandhgala, formal kurta with formal waistcoats",
     ],
     outfitImage: outfit3,
+    womenNote:
+      "Indian attire only (lehenga or sari preferred)",
+    menNote: "Indian attire only (lehenga or sari preferred)",
     note:
       "Please do not wear white and red, as these colours are reserved for my wife. Even white shirts and trousers.",
   },
@@ -63,6 +65,7 @@ const events: WeddingEvent[] = [
     title: "The Grand Finale",
     description: [],
     outfitImage: outfit5,
+    
     womenNote:
       "Dress to impress — just don't try to look better than my wife.",
     menNote: "Black tie / tuxedo",
@@ -105,7 +108,9 @@ const WardrobeSection = () => {
                   {event.date}
                 </span>
               </div>
-            ) : null}
+            ) : (
+              <div className="mb-10 border-t border-border"></div>
+            )}
 
             {/* CONTENT WRAPPER */}
             <div className="mx-auto md:max-w-5xl">
@@ -130,12 +135,24 @@ const WardrobeSection = () => {
                   {event.subtitle && (
                     <p className="font-serif text-lg text-muted-foreground italic">
                       {event.subtitle}
-                      {event.womenNote && (
-                        <>
-                          <br />
-                          {event.womenNote}
-                        </>
-                      )}
+                    </p>
+                  )}
+
+                  {event.additionalNote && (
+                    <p className="font-serif text-lg text-muted-foreground italic">
+                      {event.additionalNote}
+                    </p>
+                  )}
+
+                  {event.womenNote && (
+                    <p className="font-serif text-lg text-muted-foreground italic">
+                      <strong>Women:</strong> {event.womenNote}
+                    </p>
+                  )}
+
+                  {event.menNote && (
+                    <p className="font-serif text-lg text-muted-foreground italic">
+                      <strong>Men:</strong> {event.menNote}
                     </p>
                   )}
 
@@ -153,8 +170,14 @@ const WardrobeSection = () => {
                   )}
 
                   {event.note && (
-                    <p className="font-serif text-sm text-muted-foreground italic pt-3 border-t border-border">
-                      {event.note}
+                    <p className="font-serif text-sm text-muted-foreground italic pt-3">
+                      {event.title === "The Wedding" ? (
+                        <>
+                          <strong className="uppercase">Please do not wear</strong> {event.note.replace(/^Please do not wear /i, "")}
+                        </>
+                      ) : (
+                        event.note
+                      )}
                     </p>
                   )}
                 </div>
