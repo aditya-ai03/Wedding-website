@@ -58,14 +58,13 @@ const FAQSection = () => {
         {faqs.map((faq, index) => (
           <div 
             key={index} 
-            className="grid grid-cols-[auto_1fr] gap-6 animate-fade-in"
+            className="grid grid-cols-[3rem_1fr] gap-6 animate-fade-in items-start"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className="flex items-start">
+            <div className="flex items-start justify-center">
               <img 
                 src={faqImages[index]} 
                 alt={(index + 1).toString()} 
-                /* Logic: If it's the first item (index 0), use w-7, otherwise use w-10 */
                 className={`${index === 0 ? "w-6" : "w-10"} h-auto object-contain`} 
               />
             </div>
