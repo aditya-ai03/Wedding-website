@@ -18,8 +18,8 @@ const destinations: Destination[] = [
     title: "Goa (Relaxed + Fun)",
     octoberTitle: "Why it's great in October:",
     octoberPoints: [
-      "Monsoon ends — greenery & fewer crowds",
-      "Beach clubs reopen, weather is pleasant (not too hot)",
+      "Monsoon ends — greenery + fewer crowds",
+      "Beach clubs reopen, weather is pleasant (not crazy hot)",
     ],
   },
   {
@@ -34,7 +34,7 @@ const destinations: Destination[] = [
     octoberTitle: "Why October is ideal:",
     octoberPoints: [
       "Park reopens in October after monsoon",
-      "Lush green forest & good wildlife sightings",
+      "Lush green forest + good wildlife sightings",
     ],
   },
   {
@@ -42,8 +42,9 @@ const destinations: Destination[] = [
     title: "Jawai Leopard Safari (Luxury + Unique)",
     octoberTitle: "Why it's special:",
     octoberPoints: [
-      "Post-monsoon landscapes are fresh and scenic",
-      "Ideal conditions for safaris",
+      "Leopard in natural rocky landscape",
+      "Super exclusive and peacefull",
+      "Luxury tented camps"
     ],
   },
   {
@@ -51,8 +52,8 @@ const destinations: Destination[] = [
     title: "Jaipur + Agra (Royal + Iconic India)",
     octoberTitle: "Why October works:",
     octoberPoints: [
-      "Comfortable temperatures for sightseeing",
-      "Before peak winter crowds arrive",
+      "Comfortable sightseeing weather",
+      "Festive Season starting",
     ],
   },
 ];
@@ -89,14 +90,14 @@ const ExploreIndiaSection = () => {
               className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="md:grid md:grid-cols-[auto_1fr] md:gap-6 md:max-w-3xl md:mx-auto">
+              <div className="md:grid md:grid-cols-2 md:gap-8 md:max-w-4xl md:mx-auto md:items-center">
                 
                 {/* MOBILE: Image + Title Row */}
                 <div className="flex items-center gap-4 md:block">
                   <img
                     src={destination.image}
                     alt={destination.title}
-                    className="w-[150px] rounded-xl md:w-full md:max-w-lg md:rounded-2xl"
+                    className="w-[150px] rounded-xl md:w-full md:max-w-2xl md:rounded-2xl"
                   />
 
                   <h3 className="font-display text-xl font-semibold text-primary md:hidden">
@@ -105,7 +106,7 @@ const ExploreIndiaSection = () => {
                 </div>
 
                 {/* Text */}
-                <div className="mt-4 md:mt-0 flex flex-col space-y-2 md:space-y-3 md:py-8 md:pl-10">
+                <div className="mt-4 md:mt-0 flex flex-col space-y-2 md:space-y-3">
                   {/* DESKTOP Title */}
                   <h3 className="hidden md:block font-display text-2xl text-primary font-semibold">
                     {destination.title}
