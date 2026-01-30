@@ -120,11 +120,13 @@ const RSVPPage = () => {
           <WeddingHeader activeNav="RSVP" useTopLogo={true}/>
 
           {/* RSVP Title */}
-          <section className="text-center px-4 md:px-8 py-6 mt-1 mb-1">
-            <h1 className="font-cormorant text-4xl md:text-6xl text-primary tracking-[0.3em] mb-2 md:font-bold">
-              R.S.V.P
-            </h1>
-         
+          <section className="text-center px-4 md:px-8 py-6 -mt-2 mb-6 md:mb-4">
+            <h1 className="font-cormorant text-4xl md:text-[145px] text-primary tracking-[0.1em] mb-2 font-semibold">
+                  R.S.V.P
+                </h1>
+               <p className="font-lora text-sm text-primary text-center relative md:top-12 md:right-6">
+  Please respond before March 31<sup>st</sup>, 2026.
+</p>
           </section>
 
           {/* Form Card */}
@@ -143,9 +145,6 @@ const RSVPPage = () => {
               {/* Pink Border Card */}
               <div className="bg-blush rounded-2xl p-4 md:p-6 border-4 border-blush">
                 {/* Inner Cream Card */}
-                 <p className="font-lora text-sm md:text-xl text-primary text-center">
-  Please respond before March 31<sup>st</sup>, 2026.
-</p>
                 <div className="bg-cream/90 rounded-xl p-6 md:p-8 border border-blush/50">
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -385,7 +384,9 @@ const RSVPPage = () => {
                 <h1 className="font-cormorant text-4xl md:text-[145px] text-primary tracking-[0.1em] mb-2 font-semibold">
                   R.S.V.P
                 </h1>
-               
+               <p className="font-lora text-xl text-primary text-center relative md:top-12 md:right-6">
+  Please respond before March 31<sup>st</sup>, 2026.
+</p>
               </section>
 
               {/* Form Card */}
@@ -405,9 +406,7 @@ const RSVPPage = () => {
 
                   {/* Pink Border Card */}
                   <div className="bg-blush rounded-2xl p-4 md:p-6 border-4 border-blush">
-                     <p className="font-lora text-xl text-primary text-center">
-  Please respond before March 31<sup>st</sup>, 2026.
-</p>
+                     
 
                     {/* Inner Cream Card */}
                     <div className="bg-cream/90 rounded-xl p-6 md:p-8 border border-blush/50">
